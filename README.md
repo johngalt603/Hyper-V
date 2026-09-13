@@ -7,8 +7,8 @@ https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/
 **Hyper-V EDR/AV Exclusions**  
 https://learn.microsoft.com/en-us/troubleshoot/windows-server/virtualization/antivirus-exclusions-for-hyper-v-hosts  
 
-**Nakivo Hyper-V Resources**
-https://www.nakivo.com/blog/platform/hyper-v/
+**Nakivo Hyper-V Resources**  
+https://www.nakivo.com/blog/platform/hyper-v/  
 
 **Hyper-V Security Best Practices**  
 https://www.starwindsoftware.com/blog/hyper-v-security-mistakes-dont-want-make/  
@@ -47,14 +47,16 @@ Prerequisites: Install Failover Clustering, Multipath I/O (MPIO), and the Hyper-
 Network Design: Keep iSCSI/heartbeat traffic on separate physical/virtual adapters without NIC teaming for StarWind synchronization links.  
 MPIO Configuration: Enable MPIO support for iSCSI devices under Windows management features.  
 Target Connection: Open the Microsoft iSCSI Initiator, discover portal IPs, and connect targets with multi-path checked.  
-Disk Initialization: Bring disks online via Server Manager Disk Management and format/initialize for CSV (Cluster Shared Volume) use.  
+Disk Initialization: Bring disks online via Server Manager Disk Management and format/initialize for CSV (Cluster Shared Volume) use.    
+
 
 **Best Practices & Performance Tips**  
 No NIC Teaming: StarWind explicitly advises against NIC teaming for synchronization/iSCSI channels; use dedicated redundant physical links instead.  
 Pass-through vs VHDX: Pass entire RAID arrays or use thick-provisioned virtual disks to avoid severe performance degradation.  
 VMQ Tuning: Disable Virtual Machine Queue (VMQ) if experiencing lagging disk performance under heavy loads.  
 
-**NOTES**
+
+**NOTES**  
 Ensure at least dual 10Gbe NICs are used (ethernet or fiber)  
 Jumbo Frames Enabled (MTU 9000)  
 Dedicated network for storage traffic & communications  
